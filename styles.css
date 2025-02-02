@@ -73,6 +73,13 @@ nav ul li a:hover {
   background-color: #3c773c;
 }
 
+.nav-link {
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+}
+
+
 #content {
   max-width: 800px;
   margin: 40px auto;
@@ -132,6 +139,19 @@ nav ul li a:hover {
   cursor: not-allowed;
   pointer-events: none;
 }
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+.responsive-logo {
+  max-width: 15rem;
+  height: auto;
+}
+
 
 #features {
   padding: 40px 20px;
