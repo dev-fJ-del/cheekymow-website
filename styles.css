@@ -34,10 +34,21 @@ header {
   text-align: center;
 }
 
+nav {
+  background-color: #28a745;
+  text-align: center;
+  padding: 10px;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -49,6 +60,37 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f8f9fa;
+}
+
+#content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#content h2,
+#content h3 {
+  font-family: "DIN Medium";
+  color: #333;
+}
+
+#content p {
+  font-family: "DIN Medium", cursive;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 #hero {
@@ -69,6 +111,8 @@ nav ul li a {
   border-radius: 5px;
   font-size: 18px;
   gap: 10px;
+  width: 200px;
+  height: 25px;
 }
 
 .cta-buttons .btn .fa-brands {
@@ -78,6 +122,13 @@ nav ul li a {
 
 .cta-buttons .btn:hover {
   background-color: #218838;
+}
+
+.cta-buttons .btn.disabled {
+  background-color: #aaa;
+  color: #ddd;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 #features {
@@ -125,6 +176,7 @@ nav ul li a {
   text-align: left;
   width: 45%;
 }
+
 .feature-section:nth-child(3) {
   background-color: #ffd699;
 }
@@ -246,6 +298,15 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
   .cta-buttons .btn {
     display: block;
     width: 80%;
@@ -263,12 +324,14 @@ nav ul li a {
   .feature-wide img {
     max-width: 100%;
   }
+
   .feature-section p {
     font-size: 1.2rem;
     text-align: center;
     width: 90%;
     max-width: 100%;
   }
+
   .feature-row {
     flex-direction: column;
     align-items: center;
@@ -279,12 +342,14 @@ nav ul li a {
     width: 80%;
     max-width: 300px;
   }
+
   .feature-wide {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 }
+
 footer {
   text-align: center;
   padding: 15px;
@@ -292,4 +357,20 @@ footer {
   color: white;
   width: 100%;
   box-sizing: border-box;
+}
+
+#jump-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: none;
+}
+#jump-to-top:hover {
+  background-color: #218838;
 }

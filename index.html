@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CheekyMow - Preview</title>
+    <title>cheekymow</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="fav.ico">
 </head>
 <body>
     <button id="dark-mode-toggle">Toggle Dark Mode</button>
@@ -30,11 +31,11 @@
         <h2>The Smart Lawn & Garden Management App</h2>
         <p>Track your lawn care, watering schedules, and optimize your garden maintenance.</p>
         <div class="cta-buttons">
-            <a href="#" class="btn">
+            <a href="https://play.google.com/store/apps/details?id=com.companyname.cheekymow" target="_blank" class="btn">
                 <span class="fa-brands">&#xf3ab;</span> Get it on Google Play
             </a>
-            <a href="#" class="btn">
-                <span class="fa-brands">&#xf179;</span> Download on the App Store
+            <a href="#" class="btn disabled">
+                <span class="fa-brands">&#xf179;</span> Coming Soon
             </a>
         </div>        
     </section>
@@ -81,5 +82,17 @@
     <footer>
         <p>&copy; 2025 CheekyMow. All rights reserved.</p>
     </footer>
+    <a href="#" id="jump-to-top">↑ Top</a>
+    <script>
+        const jumpToTopButton = document.getElementById("jump-to-top");
+    
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                jumpToTopButton.style.display = "block";
+            } else {
+                jumpToTopButton.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
