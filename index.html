@@ -43,6 +43,15 @@
      }
      </script>
 
+     <!-- Register cache -->
+     <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js');
+          });
+        }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="fav.ico">
 </head>
@@ -55,7 +64,7 @@
     });
 </script>
     <header>
-        <img src="images/cheekymow_logo.webp" loading="lazy" style="height: 15rem;" alt="CheekyMow logo">
+        <img src="images/cheekymow_logo.webp" alt="cheekymow logo" style="height: 15rem;">
         <nav>
             <ul>
                 <li><a href="#features">Features</a></li>
@@ -83,27 +92,27 @@
         <h2>Powerful Features for Your Lawn & Garden</h2>
     
         <div class="feature-row">
-            <img src="images/features/image1.webp" alt="Automated Lawn Watering" loading="lazy">
-            <img src="images/features/image2.webp" alt="Smart Gardening Planner" loading="lazy">
+            <img src="images/features/image1.webp" alt="Automated Lawn Watering" loading="lazy" width="800" height="550">
+            <img src="images/features/image2.webp" alt="Smart Gardening Planner" loading="lazy" width="800" height="550">
         </div>
     
         <div class="feature-section">
-            <img src="images/features/image3.webp" alt="Lawn Care Scheduling" loading="lazy">
+            <img src="images/features/image3.webp" alt="Lawn Care Scheduling" loading="lazy" width="800" height="550">
             <p>Plan Your Lawn Care Routine with ease and schedule tasks to keep your lawn healthy.</p>
         </div>
     
         <div class="feature-section">
-            <img src="images/features/image4.webp" alt="Lawn Health Tracking" loading="lazy">
+            <img src="images/features/image4.webp" alt="Lawn Health Tracking" loading="lazy" width="800" height="550">
             <p>Track your lawn’s health and access advanced tools for landscape optimization.</p>
         </div>
     
         <div class="feature-section">
-            <img src="images/features/image5.webp" alt="Gardening Automation" loading="lazy">
+            <img src="images/features/image5.webp" alt="Gardening Automation" loading="lazy" width="800" height="550">
             <p>Get actionable insights with premium features designed for your lawn’s needs.</p>
         </div>
     
-        <div class="feature-section feature-wide" loading="lazy">
-            <img src="images/features/feature-graphic.webp" alt="cheekymow Lawn Care App">
+        <div class="feature-section feature-wide" loading="lazy" >
+            <img src="images/features/feature-graphic.webp" alt="cheekymow Lawn Care App" width="800" height="500">
         </div>
     </section>
     
