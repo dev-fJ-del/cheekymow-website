@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tos.html
+Disallow: /privacy.html
+Allow: /
+Sitemap: https://cheekymow.au/sitemap.xml
