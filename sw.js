@@ -4,7 +4,7 @@ const urlsToCache = [
   "/styles.css",
   "/fonts/DIN%20Medium.ttf",
   "/fonts/Arima-SemiBold.ttf",
-  "/fonts/Font%20Awesome%206%20Brands.otf",
+  "/fonts/Font Awesome 6 Brands-Regular-400.otf",
   "/images/cheekymow_logo.webp",
   "/images/features/image1.webp",
   "/images/features/image2.webp",

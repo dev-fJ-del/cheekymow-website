@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: "DIN Medium";
+  font-family: "DIN Medium",sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
@@ -197,6 +197,10 @@ nav ul li a:hover {
   line-height: 1.6;
   text-align: left;
   width: 45%;
+}
+
+#features, .feature-section {
+  min-height: 450px;
 }
 
 .feature-section:nth-child(3) {
