@@ -1,0 +1,15 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls",
+            "delegate_permission/common.get_login_creds"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.companyname.cheekymow",
+            "sha256_cert_fingerprints": [
+                "2D:2F:C9:C5:C6:67:26:96:C4:23:06:51:3D:3D:17:0C:E3:D1:5F:D5:93:0E:B3:53:9B:5E:E0:1B:11:BA:D3:25"
+            ]
+        }
+    }
+]
