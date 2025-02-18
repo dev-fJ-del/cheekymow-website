@@ -112,12 +112,12 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   margin: 10px;
-  padding: 10px 20px;
+  padding: 12px;
   background-color: #28a745;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   gap: 10px;
   width: 200px;
   height: 25px;
@@ -253,6 +253,7 @@ nav ul li a:hover {
   text-align: center;
   padding: 5px;
   gap: 0px;
+  background-color: #fafafa;
   width: 100%;
 }
 
@@ -263,10 +264,10 @@ nav ul li a:hover {
 
 #support p {
   font-family: "DIN Medium";
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 10px;
-  line-height: 1.4;
+  line-height: 1;
 }
 
 #support p.subtext {
@@ -285,7 +286,7 @@ nav ul li a:hover {
 #support a {
   color: #28a745;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 200;
   font-family: "DIN Medium";
 }
 
