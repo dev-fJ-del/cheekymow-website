@@ -1,280 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVP4CEMY37"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XVP4CEMY37');
-    </script>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XVP4CEMY37"
+    ></script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add CSP meta tag -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com; media-src 'self';"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cheekymow - Smart Lawn & Garden Care App</title>
-    <meta name="description" content="cheekymow is the ultimate lawn care and garden management app. Automate watering schedules, track lawn health, and get expert gardening tips.">
-    <meta name="keywords" content="lawn care app, garden planner, smart irrigation, watering schedule, lawn health tracker, gardening automation, lawn maintenance">
-    <meta name="author" content="cheekymow">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="cheekymow is the ultimate lawn care and garden management app. Automate watering schedules, track lawn health, and get expert gardening tips."
+    />
+    <meta
+      name="keywords"
+      content="lawn care app, garden planner, smart irrigation, watering schedule, lawn health tracker, gardening automation, lawn maintenance"
+    />
+    <meta name="author" content="cheekymow" />
+    <meta name="robots" content="index, follow" />
 
-    <meta property="og:title" content="cheekymow - Smart Lawn & Garden Care App">
-    <meta property="og:description" content="Track your lawn care, automate watering schedules, and optimize your garden maintenance with cheekymow.">
-    <meta property="og:image" content="https://cheekymow.au/images/features/feature-graphic.jpg">
-    <meta property="og:url" content="https://cheekymow.au">
-    <meta property="og:type" content="website">
-     
+    <meta
+      property="og:title"
+      content="cheekymow - Smart Lawn & Garden Care App"
+    />
+    <meta
+      property="og:description"
+      content="Track your lawn care, automate watering schedules, and optimize your garden maintenance with cheekymow."
+    />
+    <meta
+      property="og:image"
+      content="https://cheekymow.au/images/features/feature-graphic.jpg"
+    />
+    <meta property="og:url" content="https://cheekymow.au" />
+    <meta property="og:type" content="website" />
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cheekymow - Smart Lawn & Garden Care App">
-    <meta name="twitter:description" content="Lawn care made easy! Track watering schedules, automate gardening, and optimize your lawn's health with cheekymow.">
-    <meta name="twitter:image" content="https://cheekymow.au/images/features/feature-graphic.jpg">
-     
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="cheekymow - Smart Lawn & Garden Care App"
+    />
+    <meta
+      name="twitter:description"
+      content="Lawn care made easy! Track watering schedules, automate gardening, and optimize your lawn's health with cheekymow."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cheekymow.au/images/features/feature-graphic.jpg"
+    />
+
     <script type="application/ld+json">
-    {
+      {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
         "name": "cheekymow",
         "operatingSystem": "ANDROID",
         "applicationCategory": "Utility",
         "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "1200"
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "1200"
         },
         "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         }
-    }
+      }
     </script>
 
-    <script>
-       if ('serviceWorker' in navigator) {
-         window.addEventListener('load', function() {
-           navigator.serviceWorker.register('/sw.js');
-         });
-       }
-    </script>
+    <link
+      rel="preload"
+      href="fonts/DIN Medium.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="images/cheekymow_logo.webp" as="image" />
+    <link rel="preload" href="styles.css" as="style" />
 
-    <link rel="preload" href="fonts/DIN Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-    <link rel="preload" href="images/cheekymow_logo.webp" as="image">
-    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="fav.ico" />
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="fav.ico">
-</head>
-<body>
+    <!-- External JavaScript file -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
     <button id="dark-mode-toggle">Toggle Dark Mode</button>
-    <script>
-        const toggleButton = document.getElementById('dark-mode-toggle');
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+
     <header>
-        <img src="images/cheekymow_logo.webp" alt="cheekymow logo" class="header-logo" loading="lazy">
-        <nav>
-            <ul>
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#calculator" class="nav-link">Calculator</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-               
-                <li><a href="#support" class="nav-link">Support</a></li>
-                <li><a href="/tos" class="nav-link">Terms of Service</a></li>
-                <li><a href="/privacy" class="nav-link">Privacy Policy</a></li>
-            </ul>
-        </nav>
+      <img
+        src="images/cheekymow_logo.webp"
+        alt="cheekymow logo"
+        class="header-logo"
+        loading="lazy"
+      />
+      <nav>
+        <ul>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#calculator" class="nav-link">Calculator</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#support" class="nav-link">Support</a></li>
+          <li><a href="/tos" class="nav-link">Terms of Service</a></li>
+          <li><a href="/privacy" class="nav-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <section id="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="videos/hero-bg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videos/hero-bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>cheekymow</h1>
-            <h2>The Smart Lawn &amp; Garden Management App</h2>
-            <p>Track your lawn care, watering schedules, and optimize your garden maintenance.</p>
-            <div class="cta-buttons">
-                <a href="https://play.google.com/store/apps/details?id=com.companyname.cheekymow" target="_blank" class="btn">
-                    <span class="fa-brands">&#xf3ab;</span> Join Android Beta
-                </a>
-                <a href="https://testflight.apple.com/join/f9Ym2kRN" target="_blank" class="btn">
-                    <span class="fa-brands">&#xf179;</span> Join iOS Beta
-                </a>
-            </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>cheekymow</h1>
+        <h2>The Smart Lawn &amp; Garden Management App</h2>
+        <p>
+          Track your lawn care, watering schedules, and optimize your garden
+          maintenance.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.companyname.cheekymow"
+            target="_blank"
+            class="btn"
+          >
+            <span class="fa-brands">&#xf3ab;</span> Get it on Google Play
+            (alpha)
+          </a>
+          <a href="#" class="btn disabled">
+            <span class="fa-brands">&#xf179;</span> Coming Soon
+          </a>
         </div>
+      </div>
     </section>
-    
+
     <section id="features">
-        <h2>Powerful Features for Your Lawn &amp; Garden</h2>
+      <h2>Powerful Features for Your Lawn &amp; Garden</h2>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="images/features/image1.webp" alt="Automated Lawn Watering" loading="lazy" class="responsive-img">
-                <h3>Automated Lawn Watering</h3>
-                <p>Set custom watering schedules and get real-time alerts for best watering practices.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/features/image2.webp" alt="Smart Gardening Planner" loading="lazy" class="responsive-img">
-                <h3>Smart Gardening Planner</h3>
-                <p>Design your garden layout and receive optimized planting advice.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/features/image3.webp" alt="Lawn Care Scheduling" loading="lazy" class="responsive-img">
-                <h3>Lawn Care Scheduling</h3>
-                <p>Plan tasks to keep your lawn healthy and well-maintained all year.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/features/image4.webp" alt="Lawn Health Tracking" loading="lazy" class="responsive-img">
-                <h3>Lawn Health Tracking</h3>
-                <p>Monitor crucial metrics and get recommendations on fertilizers and treatments.</p>
-            </div>
-            <div class="feature-card">
-                <img src="images/features/image5.webp" alt="Gardening Automation" loading="lazy" class="responsive-img">
-                <h3>Gardening Automation</h3>
-                <p>Automate seeding and trimming tasks with advanced IoT integrations.</p>
-            </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <img
+            src="images/features/image1.webp"
+            alt="Automated Lawn Watering"
+            loading="lazy"
+            class="responsive-img"
+          />
+          <h3>Automated Lawn Watering</h3>
+          <p>
+            Set custom watering schedules and get real-time alerts for best
+            watering practices.
+          </p>
         </div>
+        <div class="feature-card">
+          <img
+            src="images/features/image2.webp"
+            alt="Smart Gardening Planner"
+            loading="lazy"
+            class="responsive-img"
+          />
+          <h3>Smart Gardening Planner</h3>
+          <p>
+            Design your garden layout and receive optimized planting advice.
+          </p>
+        </div>
+        <div class="feature-card">
+          <img
+            src="images/features/image3.webp"
+            alt="Lawn Care Scheduling"
+            loading="lazy"
+            class="responsive-img"
+          />
+          <h3>Lawn Care Scheduling</h3>
+          <p>
+            Plan tasks to keep your lawn healthy and well-maintained all year.
+          </p>
+        </div>
+        <div class="feature-card">
+          <img
+            src="images/features/image4.webp"
+            alt="Lawn Health Tracking"
+            loading="lazy"
+            class="responsive-img"
+          />
+          <h3>Lawn Health Tracking</h3>
+          <p>
+            Monitor crucial metrics and get recommendations on fertilizers and
+            treatments.
+          </p>
+        </div>
+        <div class="feature-card">
+          <img
+            src="images/features/image5.webp"
+            alt="Gardening Automation"
+            loading="lazy"
+            class="responsive-img"
+          />
+          <h3>Gardening Automation</h3>
+          <p>
+            Automate seeding and trimming tasks with advanced IoT integrations.
+          </p>
+        </div>
+      </div>
 
-        <div class="feature-wide">
-            <img src="images/features/feature-graphic.webp" alt="cheekymow Lawn Care App" class="responsive-img" loading="lazy">
-        </div>
+      <div class="feature-wide">
+        <img
+          src="images/features/feature-graphic.webp"
+          alt="cheekymow Lawn Care App"
+          class="responsive-img"
+          loading="lazy"
+        />
+      </div>
     </section>
 
     <section id="calculator">
-        <h2>Try Our Lawn Care Calculator</h2>
-        <p>Estimate watering frequency, fertilization needs, and more based on your lawn's size &amp; grass type.</p>
+      <h2>Try Our Lawn Care Calculator</h2>
+      <p>
+        Estimate watering frequency, fertilization needs, and more based on your
+        lawn's size &amp; grass type.
+      </p>
 
-        <div class="calculator-container">
-            <form id="lawn-calculator-form">
-                <label for="lawn-size">Lawn Size (in sq. ft):</label>
-                <input type="number" id="lawn-size" name="lawn-size" placeholder="e.g., 2000" min="1" required>
+      <div class="calculator-container">
+        <form id="lawn-calculator-form">
+          <label for="lawn-size">Lawn Size (in sq. ft):</label>
+          <input
+            type="number"
+            id="lawn-size"
+            name="lawn-size"
+            placeholder="e.g., 2000"
+            min="1"
+            required
+          />
 
-                <label for="grass-type">Grass Type:</label>
-                <select id="grass-type" name="grass-type" required>
-                    <option value="">Select a type</option>
-                    <option value="warm-season">Warm Season Grass</option>
-                    <option value="cool-season">Cool Season Grass</option>
-                </select>
+          <label for="grass-type">Grass Type:</label>
+          <select id="grass-type" name="grass-type" required>
+            <option value="">Select a type</option>
+            <option value="warm-season">Warm Season Grass</option>
+            <option value="cool-season">Cool Season Grass</option>
+          </select>
 
-                <button type="submit" class="btn">Calculate</button>
-            </form>
+          <button type="submit" class="btn">Calculate</button>
+        </form>
 
-            <div class="calculator-result" id="calculator-result" style="display:none;">
-                <h3>Recommended Care</h3>
-                <p id="water-frequency"></p>
-                <p id="fertilizer-advice"></p>
-            </div>
+        <div
+          class="calculator-result"
+          id="calculator-result"
+          style="display: none"
+        >
+          <h3>Recommended Care</h3>
+          <p id="water-frequency"></p>
+          <p id="fertilizer-advice"></p>
         </div>
+      </div>
     </section>
 
     <section id="testimonials">
-        <h2>What Our Users Say</h2>
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <blockquote>
-                    “cheekymow has transformed how I care for my lawn. The scheduling feature is a game-changer!”
-                </blockquote>
-                <cite>- Alex P.</cite>
-            </div>
-            <div class="carousel-slide">
-                <blockquote>
-                    “I love the personalized watering recommendations. My grass has never looked this green!”
-                </blockquote>
-                <cite>- Morgan T.</cite>
-            </div>
-            <div class="carousel-slide">
-                <blockquote>
-                    “Super user-friendly interface and great support. Highly recommend to new gardeners!”
-                </blockquote>
-                <cite>- Jamie L.</cite>
-            </div>
+      <h2>What Our Users Say</h2>
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <blockquote>
+            "cheekymow has transformed how I care for my lawn. The scheduling
+            feature is a game-changer!"
+          </blockquote>
+          <cite>- Alex P.</cite>
         </div>
-        <div class="carousel-controls">
-            <button class="carousel-btn" id="prevBtn">&#10094;</button>
-            <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        <div class="carousel-slide">
+          <blockquote>
+            "I love the personalized watering recommendations. My grass has
+            never looked this green!"
+          </blockquote>
+          <cite>- Morgan T.</cite>
         </div>
+        <div class="carousel-slide">
+          <blockquote>
+            "Super user-friendly interface and great support. Highly recommend
+            to new gardeners!"
+          </blockquote>
+          <cite>- Jamie L.</cite>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn" id="nextBtn">&#10095;</button>
+      </div>
     </section>
 
     <section id="support">
-        <h2>Need Help? We’ve Got You Covered!</h2>
-        <h3>Need bulk user access for your company? Reach out to us!</h3>
-        <p>We're here to assist you. Contact us anytime at <a href="mailto:support@cheekymow.au">support@cheekymow.au</a>.</p>
+      <h2>Need Help? We've Got You Covered!</h2>
+      <h3>Need bulk user access for your company? Reach out to us!</h3>
+      <p>
+        We're here to assist you. Contact us anytime at
+        <a href="mailto:support@cheekymow.au">support@cheekymow.au</a>.
+      </p>
     </section>
 
     <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/profile.php?id=61572473565196" target="_blank" class="social-btn">
-                <span class="icon">&#xf09a;</span>
-            </a>
-            <a href="#" target="_blank" class="social-btn">
-                <span class="icon">&#xe07b;</span>
-            </a>
-            <a href="#" target="_blank" class="social-btn">
-                <span class="icon">&#xf16d;</span>
-            </a>
-            <a href="#" target="_blank" class="social-btn">
-                <span class="icon">&#xf167;</span>
-            </a>
-        </div>
-        <p>&copy; 2025 CheekyMow. All rights reserved.</p>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=61572473565196"
+          target="_blank"
+          class="social-btn"
+        >
+          <span class="icon">&#xf09a;</span>
+        </a>
+        <a href="#" target="_blank" class="social-btn">
+          <span class="icon">&#xe07b;</span>
+        </a>
+        <a href="#" target="_blank" class="social-btn">
+          <span class="icon">&#xf16d;</span>
+        </a>
+        <a href="#" target="_blank" class="social-btn">
+          <span class="icon">&#xf167;</span>
+        </a>
+      </div>
+      <p>&copy; 2025 CheekyMow. All rights reserved.</p>
     </footer>
-    
+
     <a href="#" id="jump-to-top">↑ Top</a>
-
-    <script>
-        const jumpToTopButton = document.getElementById("jump-to-top");
-        window.addEventListener("scroll", () => {
-            jumpToTopButton.style.display = window.scrollY > 200 ? "block" : "none";
-        });
-
-        const slides = document.querySelectorAll(".carousel-slide");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, idx) => {
-                slide.classList.remove("active");
-                if (idx === index) slide.classList.add("active");
-            });
-        }
-
-        prevBtn.addEventListener("click", () => {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        });
-
-        nextBtn.addEventListener("click", () => {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        });
-
-        const calculatorForm = document.getElementById("lawn-calculator-form");
-        const calculatorResult = document.getElementById("calculator-result");
-        const waterFrequency = document.getElementById("water-frequency");
-        const fertilizerAdvice = document.getElementById("fertilizer-advice");
-
-        calculatorForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const sizeValue = Number(document.getElementById("lawn-size").value);
-            const grassType = document.getElementById("grass-type").value;
-
-            let frequency = grassType === "warm-season" ? 3 : 2;
-            let fertilizer = grassType === "warm-season" 
-                                ? "Use a nitrogen-rich fertilizer monthly in summer." 
-                                : "Use a balanced fertilizer in spring and fall.";
-
-            waterFrequency.textContent = `Recommended watering: ~${frequency} times per week for ${sizeValue} sq. ft.`;
-            fertilizerAdvice.textContent = fertilizer;
-
-            calculatorResult.style.display = "block";
-        });
-    </script>
-</body>
+  </body>
 </html>

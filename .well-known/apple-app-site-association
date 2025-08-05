@@ -4,8 +4,25 @@
         "details": [
             {
                 "appID": "TNGF57W332.com.companyname.cheekymow",
-                "paths": ["/profile", "/upgrade"]
+                "paths": [
+                    "/profile",
+                    "/profile/*",
+                    "/upgrade",
+                    "/upgrade/*",
+                    "/app/*",
+                    "/deeplink/*"
+                ]
             }
+        ]
+    },
+    "webcredentials": {
+        "apps": [
+            "TNGF57W332.com.companyname.cheekymow"
+        ]
+    },
+    "appclips": {
+        "apps": [
+            "TNGF57W332.com.companyname.cheekymow.Clip"
         ]
     }
 }
