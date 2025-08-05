@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "TNGF57W332.com.companyname.cheekymow",
+                "paths": ["/profile", "/upgrade"]
+            }
+        ]
+    }
+}
