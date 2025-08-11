@@ -57,6 +57,17 @@ a {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -140,13 +151,14 @@ nav ul li a:hover {
 #hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 20px 0;
 }
 
 .hero-video {
@@ -171,8 +183,9 @@ nav ul li a:hover {
   position: relative;
   z-index: 1;
   max-width: 600px;
-  padding: 0 20px;
+  padding: 20px;
   animation: fadeIn 1s ease-out;
+  width: 100%;
 }
 
 .hero-content h1 {
@@ -193,6 +206,102 @@ nav ul li a:hover {
   margin-bottom: 1em;
   line-height: 1.4;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* QR CODE DOWNLOAD SECTION */
+.qr-download-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 550px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1.2s ease-out 0.5s both;
+}
+
+.qr-title {
+  color: #2c5f2d;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: "Arima", cursive;
+  text-align: center;
+}
+
+.qr-subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.qr-codes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.qr-code-item {
+  text-align: center;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 160px;
+}
+
+.qr-code-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.qr-code-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.qr-platform {
+  font-weight: 600;
+  color: #2c5f2d;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.qr-instruction {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.qr-or-divider {
+  text-align: center;
+  color: #666;
+  font-weight: 600;
+  margin: 20px 0;
+  position: relative;
+}
+
+.qr-or-divider::before,
+.qr-or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #ddd;
+}
+
+.qr-or-divider::before {
+  left: 0;
+}
+
+.qr-or-divider::after {
+  right: 0;
 }
 
 /* CTA BUTTONS */
@@ -711,6 +820,30 @@ footer {
     margin: 8px 0;
   }
 
+  /* QR Code mobile styles */
+  .qr-download-section {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .qr-title {
+    font-size: 1.5rem;
+  }
+
+  .qr-codes-container {
+    gap: 20px;
+  }
+
+  .qr-code-item {
+    min-width: 140px;
+    padding: 15px;
+  }
+
+  .qr-code-item img {
+    width: 100px;
+    height: 100px;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -798,6 +931,17 @@ footer {
     padding: 10px 14px;
   }
 
+  /* QR Code mobile styles for small screens */
+  .qr-codes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qr-code-item {
+    width: 100%;
+    max-width: 200px;
+  }
+
   .feature-card {
     padding: 20px 15px;
   }
@@ -854,6 +998,40 @@ footer {
   color: #4caf50;
 }
 
+/* Dark mode QR code styles */
+.dark-mode .qr-download-section {
+  background: rgba(51, 51, 51, 0.95);
+}
+
+.dark-mode .qr-title {
+  color: #4caf50;
+}
+
+.dark-mode .qr-subtitle {
+  color: #ccc;
+}
+
+.dark-mode .qr-code-item {
+  background-color: #444;
+}
+
+.dark-mode .qr-platform {
+  color: #4caf50;
+}
+
+.dark-mode .qr-instruction {
+  color: #ccc;
+}
+
+.dark-mode .qr-or-divider {
+  color: #ccc;
+}
+
+.dark-mode .qr-or-divider::before,
+.dark-mode .qr-or-divider::after {
+  background: #555;
+}
+
 /* ACCESSIBILITY IMPROVEMENTS */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -869,7 +1047,8 @@ footer {
 @media (prefers-contrast: high) {
   .feature-card,
   .carousel-slide.active,
-  .calculator-result {
+  .calculator-result,
+  .qr-code-item {
     border: 2px solid #000;
   }
 
@@ -884,7 +1063,8 @@ footer {
   #dark-mode-toggle,
   .carousel-controls,
   #jump-to-top,
-  .social-icons {
+  .social-icons,
+  .qr-download-section {
     display: none !important;
   }
 

@@ -9,7 +9,7 @@
     <!-- Add CSP meta tag -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com; media-src 'self';"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://api.qrserver.com; media-src 'self';"
     />
 
     <meta charset="UTF-8" />
@@ -128,20 +128,55 @@
           Track your lawn care, watering schedules, and optimize your garden
           maintenance.
         </p>
+
+        <!-- QR Code Download Section -->
+        <div class="qr-download-section">
+          <h3 class="qr-title">📱 Quick Download</h3>
+          <p class="qr-subtitle">
+            Scan the QR code with your phone camera to download instantly!
+          </p>
+
+          <div class="qr-codes-container">
+            <div class="qr-code-item">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://play.google.com/store/apps/details?id=com.companyname.cheekymow"
+                alt="Android QR Code"
+                loading="lazy"
+              />
+              <div class="qr-platform"> <span class="icon">&#xf3ab;</span> Android</div>
+              <div class="qr-instruction">
+                Scan to download from Google Play
+              </div>
+            </div>
+
+            <div class="qr-code-item">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://testflight.apple.com/join/f9Ym2kRN"
+                alt="iOS QR Code"
+                loading="lazy"
+              />
+              <div class="qr-platform"><span class="icon">&#xf179;</span> iOS</div>
+              <div class="qr-instruction">Scan to join TestFlight Beta</div>
+            </div>
+          </div>
+
+          <div class="qr-or-divider">OR</div>
+        </div>
+
         <div class="cta-buttons">
           <a
             href="https://play.google.com/store/apps/details?id=com.companyname.cheekymow"
             target="_blank"
             class="btn"
           >
-            <span class="fa-brands">&#xf3ab;</span> Android (aplha)
+            <span class="fa-brands">&#xf3ab;</span> Android (alpha)
           </a>
           <a
             href="https://testflight.apple.com/join/f9Ym2kRN"
             target="_blank"
             class="btn"
           >
-            <span class="fa-brands">&#xf179;</span> iOS (aplha)
+            <span class="fa-brands">&#xf179;</span> iOS (alpha)
           </a>
         </div>
       </div>
