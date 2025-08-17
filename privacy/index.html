@@ -1,126 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVP4CEMY37"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XVP4CEMY37');
-  </script>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XVP4CEMY37"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XVP4CEMY37");
+    </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | cheekymow</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | cheekymow</title>
 
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="icon" type="image/x-icon" href="../fav.ico" />
-</head>
-<body>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/x-icon" href="../fav.ico" />
+  </head>
+  <body>
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
 
-  <button id="dark-mode-toggle">Toggle Dark Mode</button>
-  <script>
-    const toggleButton = document.getElementById("dark-mode-toggle");
-    toggleButton.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-  </script>
+    <header>
+      <div class="header-content">
+        <img
+          src="../images/cheekymow_logo.webp"
+          alt="cheekymow logo"
+          class="header-logo"
+          loading="lazy"
+        />
 
-  <header>
-    <img
-      src="../images/cheekymow_logo.webp"
-      alt="cheekymow logo"
-      class="header-logo"
-      loading="lazy"
-    />
-    <nav>
+        <!-- Desktop Navigation -->
+        <nav>
+          <ul>
+            <li><a href="../" class="nav-link">Home</a></li>
+            <li><a href="../#features" class="nav-link">Features</a></li>
+            <li><a href="../#calculator" class="nav-link">Calculator</a></li>
+            <li>
+              <a href="../#testimonials" class="nav-link">Testimonials</a>
+            </li>
+            <li><a href="../#support" class="nav-link">Support</a></li>
+            <li><a href="../tos" class="nav-link">Terms of Service</a></li>
+            <li><a href="../privacy" class="nav-link">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="hamburger-btn"
+          id="hamburger-btn"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobile-nav">
+        <ul>
+          <li><a href="../" class="nav-link">Home</a></li>
+          <li><a href="../#features" class="nav-link">Features</a></li>
+          <li><a href="../#calculator" class="nav-link">Calculator</a></li>
+          <li><a href="../#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="../#support" class="nav-link">Support</a></li>
+          <li><a href="../tos" class="nav-link">Terms of Service</a></li>
+          <li><a href="../privacy" class="nav-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="legal-hero">
+      <h1>Privacy Policy</h1>
+      <p><strong>Last Updated:</strong> 2025/02/01</p>
+    </section>
+
+    <section class="legal-container">
+      <h3>1. Information We Collect</h3>
       <ul>
-        <li><a href="../" class="nav-link">Home</a></li>
-        <li><a href="../tos" class="nav-link">Terms of Service</a></li>
-        <li><a href="../privacy" class="nav-link">Privacy Policy</a></li>
-        <li><a href="../#support" class="nav-link">Support</a></li>
+        <li>Account Information (e.g., name, email)</li>
+        <li>Lawn Care Data (e.g., lawn type, maintenance schedules)</li>
+        <li>Transaction Data (e.g., subscription details)</li>
       </ul>
-    </nav>
-  </header>
 
-  <section id="legal-hero">
-    <h1>Privacy Policy</h1>
-    <p><strong>Last Updated:</strong> 2025/02/01</p>
-  </section>
+      <h3>2. How We Use Your Information</h3>
+      <p>
+        Your data is used for providing and improving the Service, processing
+        transactions, and ensuring legal compliance.
+      </p>
 
-  <section class="legal-container">
-    <h3>1. Information We Collect</h3>
-    <ul>
-      <li>Account Information (e.g., name, email)</li>
-      <li>Lawn Care Data (e.g., lawn type, maintenance schedules)</li>
-      <li>Transaction Data (e.g., subscription details)</li>
-    </ul>
+      <h3>3. Data Storage &amp; Security</h3>
+      <p>
+        All user data is encrypted and securely stored. While we take security
+        seriously, no system is entirely immune to cyber threats.
+      </p>
 
-    <h3>2. How We Use Your Information</h3>
-    <p>
-      Your data is used for providing and improving the Service, processing
-      transactions, and ensuring legal compliance.
-    </p>
+      <h3>4. Data Retention and Deletion</h3>
+      <p>
+        Users may request data deletion. However, transaction records must be
+        retained for legal and tax purposes but are anonymized.
+      </p>
 
-    <h3>3. Data Storage &amp; Security</h3>
-    <p>
-      All user data is encrypted and securely stored. While we take security
-      seriously, no system is entirely immune to cyber threats.
-    </p>
+      <h3>5. Third-Party Services</h3>
+      <p>
+        Some functionality relies on third-party services that comply with
+        Australian privacy laws.
+      </p>
 
-    <h3>4. Data Retention and Deletion</h3>
-    <p>
-      Users may request data deletion. However, transaction records must be
-      retained for legal and tax purposes but are anonymized.
-    </p>
+      <h3>6. Cookies &amp; Tracking</h3>
+      <p>
+        Cookies are used to enhance user experience. You can disable cookies via
+        your browser settings if desired.
+      </p>
 
-    <h3>5. Third-Party Services</h3>
-    <p>
-      Some functionality relies on third-party services that comply with
-      Australian privacy laws.
-    </p>
+      <h3>7. Contact</h3>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us
+        at
+        <a href="mailto:support@cheekymow.au">support@cheekymow.au</a>.
+      </p>
+    </section>
 
-    <h3>6. Cookies &amp; Tracking</h3>
-    <p>
-      Cookies are used to enhance user experience. You can disable cookies via
-      your browser settings if desired.
-    </p>
+    <footer>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=61572473565196"
+          target="_blank"
+          class="social-btn"
+        >
+          <span class="icon">&#xf09a;</span>
+        </a>
+        <a href="#" target="_blank" class="social-btn">
+          <span class="icon">&#xe07b;</span>
+        </a>
+        <a href="#" target="_blank" class="social-btn">
+          <span class="icon">&#xf16d;</span>
+        </a>
+        <a href="#" target="_blank" class="social-btn">
+          <span class="icon">&#xf167;</span>
+        </a>
+      </div>
+      <p>&copy; 2025 CheekyMow. All rights reserved.</p>
+    </footer>
 
-    <h3>7. Contact</h3>
-    <p>
-      If you have any questions about this Privacy Policy, please contact us at
-      <a href="mailto:support@cheekymow.au">support@cheekymow.au</a>.
-    </p>
-  </section>
+    <a href="#" id="jump-to-top">↑ Top</a>
 
-  <footer>
-    <div class="social-icons">
-      <a
-        href="https://www.facebook.com/profile.php?id=61572473565196"
-        target="_blank"
-        class="social-btn"
-      >
-        <span class="icon">&#xf09a;</span>
-      </a>
-      <a href="#" target="_blank" class="social-btn">
-        <span class="icon">&#xe07b;</span>
-      </a>
-      <a href="#" target="_blank" class="social-btn">
-        <span class="icon">&#xf16d;</span>
-      </a>
-      <a href="#" target="_blank" class="social-btn">
-        <span class="icon">&#xf167;</span>
-      </a>
-    </div>
-    <p>&copy; 2025 CheekyMow. All rights reserved.</p>
-  </footer>
+    <script>
+      // Hamburger menu functionality for legal pages
+      document.addEventListener("DOMContentLoaded", function () {
+        // Dark Mode Toggle
+        const toggleButton = document.getElementById("dark-mode-toggle");
+        if (toggleButton) {
+          toggleButton.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
 
-  <a href="#" id="jump-to-top">↑ Top</a>
-  <script>
-    const jumpToTopButton = document.getElementById("jump-to-top");
-    window.addEventListener("scroll", () => {
-      jumpToTopButton.style.display = (window.scrollY > 200) ? "block" : "none";
-    });
-  </script>
-</body>
+            // Save preference to localStorage
+            const isDarkMode = document.body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
+          });
+
+          // Load saved dark mode preference
+          const savedDarkMode = localStorage.getItem("darkMode");
+          if (savedDarkMode === "true") {
+            document.body.classList.add("dark-mode");
+          }
+        }
+
+        // Hamburger menu functionality
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileNav = document.getElementById("mobile-nav");
+        const navLinks = document.querySelectorAll(".mobile-nav .nav-link");
+
+        if (hamburgerBtn && mobileNav) {
+          // Toggle mobile menu
+          hamburgerBtn.addEventListener("click", function () {
+            hamburgerBtn.classList.toggle("active");
+            mobileNav.classList.toggle("active");
+
+            // Add aria-expanded for accessibility
+            const isExpanded = hamburgerBtn.classList.contains("active");
+            hamburgerBtn.setAttribute("aria-expanded", isExpanded);
+
+            // Prevent body scroll when menu is open
+            if (isExpanded) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "";
+            }
+          });
+
+          // Close mobile menu when clicking on a link
+          navLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              hamburgerBtn.classList.remove("active");
+              mobileNav.classList.remove("active");
+              hamburgerBtn.setAttribute("aria-expanded", "false");
+              document.body.style.overflow = "";
+            });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", function (event) {
+            const isClickInsideNav = mobileNav.contains(event.target);
+            const isClickOnHamburger = hamburgerBtn.contains(event.target);
+
+            if (
+              !isClickInsideNav &&
+              !isClickOnHamburger &&
+              mobileNav.classList.contains("active")
+            ) {
+              hamburgerBtn.classList.remove("active");
+              mobileNav.classList.remove("active");
+              hamburgerBtn.setAttribute("aria-expanded", "false");
+              document.body.style.overflow = "";
+            }
+          });
+
+          // Close mobile menu on escape key
+          document.addEventListener("keydown", function (event) {
+            if (
+              event.key === "Escape" &&
+              mobileNav.classList.contains("active")
+            ) {
+              hamburgerBtn.classList.remove("active");
+              mobileNav.classList.remove("active");
+              hamburgerBtn.setAttribute("aria-expanded", "false");
+              document.body.style.overflow = "";
+            }
+          });
+
+          // Handle window resize
+          window.addEventListener("resize", function () {
+            if (
+              window.innerWidth > 768 &&
+              mobileNav.classList.contains("active")
+            ) {
+              hamburgerBtn.classList.remove("active");
+              mobileNav.classList.remove("active");
+              hamburgerBtn.setAttribute("aria-expanded", "false");
+              document.body.style.overflow = "";
+            }
+          });
+        }
+
+        // Jump to Top Button
+        const jumpToTopButton = document.getElementById("jump-to-top");
+        if (jumpToTopButton) {
+          window.addEventListener("scroll", function () {
+            jumpToTopButton.style.display =
+              window.scrollY > 200 ? "block" : "none";
+          });
+
+          jumpToTopButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

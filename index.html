@@ -92,16 +92,44 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
 
     <header>
-      <img
-        src="images/cheekymow_logo.webp"
-        alt="cheekymow logo"
-        class="header-logo"
-        loading="lazy"
-      />
-      <nav>
+      <div class="header-content">
+        <img
+          src="images/cheekymow_logo.webp"
+          alt="cheekymow logo"
+          class="header-logo"
+          loading="lazy"
+        />
+
+        <!-- Desktop Navigation -->
+        <nav>
+          <ul>
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li><a href="#calculator" class="nav-link">Calculator</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#support" class="nav-link">Support</a></li>
+            <li><a href="/tos" class="nav-link">Terms of Service</a></li>
+            <li><a href="/privacy" class="nav-link">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="hamburger-btn"
+          id="hamburger-btn"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav" id="mobile-nav">
         <ul>
           <li><a href="#hero" class="nav-link">Home</a></li>
           <li><a href="#features" class="nav-link">Features</a></li>
@@ -111,7 +139,7 @@
           <li><a href="/tos" class="nav-link">Terms of Service</a></li>
           <li><a href="/privacy" class="nav-link">Privacy Policy</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <section id="hero">
@@ -143,7 +171,9 @@
                 alt="Android QR Code"
                 loading="lazy"
               />
-              <div class="qr-platform"> <span class="icon">&#xf3ab;</span> Android</div>
+              <div class="qr-platform">
+                <span class="icon">&#xf3ab;</span> Android
+              </div>
               <div class="qr-instruction">
                 Scan to download from Google Play
               </div>
@@ -155,7 +185,9 @@
                 alt="iOS QR Code"
                 loading="lazy"
               />
-              <div class="qr-platform"><span class="icon">&#xf179;</span> iOS</div>
+              <div class="qr-platform">
+                <span class="icon">&#xf179;</span> iOS
+              </div>
               <div class="qr-instruction">Scan to join TestFlight Beta</div>
             </div>
           </div>

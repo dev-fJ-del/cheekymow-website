@@ -89,22 +89,30 @@ a {
 header {
   background-color: #2c5f2d;
   padding: 10px 20px;
-  text-align: center;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .header-logo {
-  height: 80px;
+  height: 60px;
   width: auto;
 }
 
+/* Desktop Navigation */
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px;
+  margin: 0;
 }
 
 nav ul li a {
@@ -114,6 +122,7 @@ nav ul li a {
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.3s, transform 0.2s;
+  display: block;
 }
 
 nav ul li a:hover {
@@ -123,6 +132,114 @@ nav ul li a:hover {
 
 .nav-link {
   display: inline-block;
+}
+
+/* Hamburger Menu Button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.hamburger-btn:hover {
+  background-color: #3c773c;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Hamburger Animation */
+.hamburger-btn.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #2c5f2d;
+  border-top: 1px solid #3c773c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.mobile-nav.active {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+.mobile-nav ul {
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav ul li {
+  border-bottom: 1px solid #3c773c;
+}
+
+.mobile-nav ul li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 15px 20px;
+  margin: 0;
+  border-radius: 0;
+  transition: background-color 0.3s;
+  color: #ffffff; /* Make links white */
+  font-weight: 500; /* Match desktop nav weight */
+}
+
+.mobile-nav ul li a:hover {
+  background-color: #3c773c;
+  transform: none;
+  color: #ffffff; /* Keep white on hover */
+}
+
+/* Also add dark mode consistency */
+.dark-mode .mobile-nav ul li a {
+  color: #ffffff;
+}
+
+.dark-mode .mobile-nav ul li a:hover {
+  color: #ffffff;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* DARK MODE TOGGLE */
@@ -137,7 +254,7 @@ nav ul li a:hover {
   cursor: pointer;
   border-radius: 6px;
   font-size: 14px;
-  z-index: 1000;
+  z-index: 1001;
   transition: background-color 0.3s, transform 0.2s;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -774,24 +891,31 @@ footer {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-  header {
-    text-align: center;
-    padding: 15px 10px;
+  .header-content {
+    justify-content: space-between;
   }
 
   .header-logo {
-    height: 60px;
+    height: 50px;
   }
 
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-    gap: 5px;
+  /* Hide desktop nav on mobile */
+  nav {
+    display: none;
   }
 
-  nav ul li a {
-    margin: 3px 0;
-    padding: 10px 15px;
+  /* Show hamburger button on mobile */
+  .hamburger-btn {
+    display: block;
+  }
+
+  /* Show mobile nav when active */
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-nav.active {
+    display: block;
   }
 
   #hero {
@@ -917,6 +1041,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .header-logo {
+    height: 45px;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -929,6 +1061,11 @@ footer {
     width: 250px;
     font-size: 14px;
     padding: 10px 14px;
+  }
+
+  .mobile-nav ul li a {
+    padding: 12px 15px;
+    font-size: 14px;
   }
 
   /* QR Code mobile styles for small screens */

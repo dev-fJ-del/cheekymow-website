@@ -1,0 +1,13 @@
+/*
+  Cache-Control: no-cache
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+/*.css
+  Cache-Control: public, max-age=300
+
+/*.js  
+  Cache-Control: public, max-age=300
+
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
